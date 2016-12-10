@@ -46,11 +46,15 @@ try {
 }
 
 $app->path('app', __DIR__ . '/../app/' . $appName);
-$app->path('template', __DIR__ . '/../app/' . $appName . '/template');
 $app->path('view', __DIR__ . '/../app/' . $appName . '/view');
 
 // поддержка загрузка из папки приложения
 $app->add('autoload', __DIR__ . '/../app/' . $appName);
+
+// подключение конфига
+if ($appConfig = $app->path("app:config.php")) {
+    require_once($appConfig);
+}
 
 // подключение базы данных
 Db::setup($config['database']);

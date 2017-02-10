@@ -11,7 +11,7 @@ $config = array_replace_recursive([
     'base_dir'  => __DIR__ . '/..',
 ], (file_exists(__DIR__ . '/../config.php') ? require_once(__DIR__ . '/../config.php') : []));
 
-// определение что включен debug режим
+// check debug mode
 if ($config['debug'] ||
     (
         isset($_COOKIE['debug']) &&
@@ -31,7 +31,7 @@ if ($config['debug'] ||
     ini_set('error_reporting', '0');
 }
 
-// загрузка приложения
+// load app
 $app = App::getInstance($config);
 
 $app->path('storage', __DIR__ . '/storage');
@@ -46,27 +46,29 @@ try {
 }
 
 $app->path('app', __DIR__ . '/../app/' . $appName);
-$app->path('view', __DIR__ . '/../app/' . $appName . '/view');
+$app->path('view', __DIR__ . '/../app/' . $appName . '/View');
 
-// поддержка загрузка из папки приложения
+// load from app folder & src
 $app->add('autoload', __DIR__ . '/../app/' . $appName);
+$app->add('autoload', __DIR__ . '/../src');
 
-// подключение конфига
-if ($appConfig = $app->path("app:config.php")) {
+// load config file if exists
+if ($appConfig = $app->path('app:config.php')) {
     require_once($appConfig);
 }
 
-// подключение базы данных
+// connect database
 Db::setup($config['database']);
 
-// подключение кеша
+// connect memcache
 Mem::setup($config['memory']);
 
-// загрузка модулей
+// load modules
 $app->loadModule($config['modules']);
 
 if ($app->isDebug()) {
     $response = $app->run(true);
+
     register_shutdown_function(function () use ($app, $response) {
         $time = round(microtime(true) - $_SERVER['REQUEST_TIME_FLOAT'], 7);
         $memory = Str::convertSize(memory_get_usage());
@@ -75,6 +77,7 @@ if ($app->isDebug()) {
             ->withAddedHeader('X-Time', $time . 'ms');
         $app->respond($response);
     });
+
     exit;
 }
 

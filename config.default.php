@@ -1,28 +1,27 @@
 <?php
 
 return [
-    // режим отладки
+    // debug mode
     'debug'     => true,
 
-    // возможные приложения
+    // app list
     'app.list'  => [
         'public',
-        'admin',
     ],
 
-    // ключ шифрования
+    // secret keystring
     'secret'    => 'change-me-please',
 
-    // базовая папка
+    // base app dir
     'base_dir'  => __DIR__ . '/..',
 
-    // базовый хост
+    // base host name
     'base_host' => '',
 
-    // базовый порт
+    // base port
     'base_port' => 80,
 
-    // подключение к базе данных
+    // database connection server list
     'database'  => [
         [
             'dsn'      => 'mysql:host=DB_HOST;dbname=DB_NAME',
@@ -34,7 +33,7 @@ return [
         ],
     ],
 
-    // подключение к memcache
+    // memcache connection server list
     'memory'    => [
         [
             'host' => 'localhost',
@@ -42,8 +41,6 @@ return [
         ],
     ],
 
-    // расположение модулей
-    'modules'   => [
-        __DIR__ . '/module/',
-    ],
+    // module folder list
+    'modules'   => [],
 ];

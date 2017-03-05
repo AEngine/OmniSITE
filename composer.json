@@ -1,9 +1,9 @@
 {
   "require": {
-	"aengine/orchid": "0.3.0",
-	"aengine/orchid-database": "1.0.0",
-	"aengine/orchid-memory": "1.0.0",
-	"aengine/orchid-misc": "1.0.0",
-	"aengine/orchid-filter": "1.0.0"
+	"aengine/orchid": "0.3.*",
+	"aengine/orchid-database": "1.*.*",
+	"aengine/orchid-memory": "1.*.*",
+	"aengine/orchid-misc": "1.*.*",
+	"aengine/orchid-filter": "1.*.*"
   }
 }

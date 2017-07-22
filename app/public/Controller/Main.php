@@ -4,18 +4,14 @@ namespace Controller;
 
 use AEngine\Orchid\App;
 use AEngine\Orchid\Controller;
+use AEngine\Orchid\Http\Request;
 use AEngine\Orchid\Http\Response;
 use AEngine\Orchid\View;
-use Psr\Http\Message\RequestInterface;
-use Psr\Http\Message\ResponseInterface;
 
 class Main extends Controller
 {
-    public function index(RequestInterface $request, ResponseInterface $response)
+    public function index(Request $request, Response $response)
     {
-        /**
-         * @var Response $response
-         */
         return $response
             ->write(
                 View::fetch(

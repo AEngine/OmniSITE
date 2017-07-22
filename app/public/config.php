@@ -1,11 +1,7 @@
 <?php
 
-use AEngine\Orchid\App;
 use AEngine\Orchid\Misc\Asset;
 use Controller\Main;
-
-// app obj
-$app = App::getInstance();
 
 // resource map
 Asset::$map = [

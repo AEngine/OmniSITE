@@ -5,7 +5,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 use AEngine\Orchid\App;
 
 $config = array_replace_recursive([
-    'debug'    => strpos(__DIR__, 'ru.aefarm') !== false,
+    'debug'    => false,
     'base_dir' => __DIR__,
     'database' => [],
     'memory'   => [],
@@ -44,6 +44,4 @@ Db::setup($config['database']);
 Mem::setup($config['memory']);
 
 // load modules
-$app->loadModule([
-    __DIR__ . '/src/Module',
-]);
+$app->loadModule([/* path to folder with Modules */]);

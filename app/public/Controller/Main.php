@@ -4,8 +4,8 @@ namespace Controller;
 
 use AEngine\Orchid\App;
 use AEngine\Orchid\Controller;
-use AEngine\Orchid\Http\Request;
-use AEngine\Orchid\Http\Response;
+use AEngine\Orchid\Message\Request;
+use AEngine\Orchid\Message\Response;
 use AEngine\Orchid\View;
 
 class Main extends Controller

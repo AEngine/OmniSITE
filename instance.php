@@ -9,6 +9,7 @@ $config = array_replace_recursive([
     'base_dir' => __DIR__,
     'database' => [],
     'memory'   => [],
+    'modules'  => [],
 ], (file_exists(__DIR__ . '/config.php') ? require_once(__DIR__ . '/config.php') : []));
 
 // check debug mode
@@ -44,4 +45,4 @@ Db::setup($config['database']);
 Mem::setup($config['memory']);
 
 // load modules
-$app->loadModule([/* path to folder with Modules */]);
+$app->loadModule($config['modules']);

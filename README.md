@@ -11,7 +11,7 @@ Structure for Orchid Framework.
 Run this command from the directory in which you want to install.
 
 ```
-php composer.phar create-project aengine/omnisite [my-app-name]
+composer create-project aengine/omnisite [my-app-name]
 ```
 
 Replace `[my-app-name]` with the desired directory name for your new application.

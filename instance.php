@@ -10,7 +10,7 @@ $config = array_replace_recursive([
     'database' => [],
     'memory'   => [],
     'modules'  => [],
-], require_once(__DIR__ . '/config.php'));
+], (file_exists(__DIR__ . '/config.php') ? require_once(__DIR__ . '/config.php') : []));
 
 // check debug mode
 if ($config['debug'] ||

@@ -1,30 +1,31 @@
 {
-  "name":         "aengine/omnisite",
-  "description":  "Structure for Orchid Framework",
-  "keywords":     [
-	"php",
-	"rest",
-	"router",
-	"psr7",
-	"framework",
-	"AEngine",
-	"Orchid"
-  ],
-  "homepage":     "https://dev.aengine.team/AEngine/OmniSITE",
-  "license":      "MIT",
-  "authors": [
-	{
-	  "name": "Aleksey Ilyin",
-	  "email": "alksily@icloud.com",
-	  "homepage": "http://aengine.team/",
-	  "role": "Developer"
-	}
-  ],
-  "require":      {
-	"php":                     ">=7.0",
-	"aengine/orchid-database": "^1.0",
-	"aengine/orchid-memory":   "^1.0",
-	"aengine/orchid-misc":     "^1.0",
-	"aengine/orchid-filter":   "^1.0"
-  }
+    "name": "aengine/omnisite",
+    "description": "Structure for Orchid Framework",
+    "keywords": [
+        "php",
+        "rest",
+        "router",
+        "psr7",
+        "framework",
+        "AEngine",
+        "Orchid"
+    ],
+    "homepage": "https://dev.aengine.team/AEngine/OmniSITE",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aleksey Ilyin",
+            "email": "alksily@icloud.com",
+            "homepage": "http://aengine.team/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "aengine/orchid": "^1.0.0",
+        "aengine/orchid-database": "^1.0.0",
+        "aengine/orchid-memory": "^1.0.0",
+        "aengine/orchid-misc": "^1.0.0",
+        "aengine/orchid-filter": "^1.0.0"
+    }
 }

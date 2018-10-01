@@ -1,6 +1,6 @@
 {
     "name": "aengine/omnisite",
-    "description": "Structure for Orchid Framework",
+    "description": "Structure for new Project with Orchid Framework",
     "keywords": [
         "php",
         "rest",
@@ -22,7 +22,7 @@
     ],
     "require": {
         "php": ">=7.0",
-        "aengine/orchid": "^1.0.0",
+        "aengine/orchid": "^1.2.0",
         "aengine/orchid-database": "^1.0.0",
         "aengine/orchid-memory": "^1.0.0",
         "aengine/orchid-misc": "^1.0.0",

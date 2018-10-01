@@ -42,5 +42,7 @@ return [
     ],
 
     // module folder list
-    'modules'   => [],
+    'modules'   => [
+        __DIR__ . '/src/Module',
+    ],
 ];
